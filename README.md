@@ -48,3 +48,13 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+## Bibliotecas as serem instaladas
+```bash
+npx expo install \
+npx expo install @supabase/supabase-js
+npx expo install @react-native-async-storage/async-storage
+npx expo install react-native-url-polyfill
+npx expo install react-native-toast-message
+```
