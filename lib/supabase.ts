@@ -1,10 +1,10 @@
-import { AppState, Platform } from 'react-native'
-import 'react-native-url-polyfill/auto'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createClient, processLock } from '@supabase/supabase-js'
+import { AppState, Platform } from 'react-native'
+import 'react-native-url-polyfill/auto'
 
-const supabaseUrl = 'https://npreacgqgogxwsjqyqdz.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wcmVhY2dxZ29neHdzanF5cWR6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjI1MDg0NSwiZXhwIjoyMDcxODI2ODQ1fQ.8mhq0aw6Dwnkgc1WxmeeK1Wgkty9rK2njjd82HWbu0I'
+const supabaseUrl = 'https://nqekmxcgvrtgpqysodtt.supabase.co'
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5xZWtteGNndnJ0Z3BxeXNvZHR0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MTc3NjQ4OCwiZXhwIjoyMDc3MzUyNDg4fQ.lZr5TZLHXAUsEGEZB8GX5LTQVea-WtDdfc-OfdDHm-8'
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
@@ -16,11 +16,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   },
 })
 
-// Tells Supabase Auth to continuously refresh the session automatically
-// if the app is in the foreground. When this is added, you will continue
-// to receive `onAuthStateChange` events with the `TOKEN_REFRESHED` or
-// `SIGNED_OUT` event if the user's session is terminated. This should
-// only be registered once.
 if (Platform.OS !== "web") {
   AppState.addEventListener('change', (state) => {
     if (state === 'active') {
