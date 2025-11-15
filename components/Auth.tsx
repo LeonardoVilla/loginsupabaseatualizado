@@ -17,10 +17,22 @@ export default function Auth() {
     })
 
     if (error) {
+      console.log("ERRO LOGIN:", error)
+
+      let msg = error.message
+
+      if (msg.includes("Email not confirmed")) {
+        msg = "Você precisa confirmar seu e-mail antes de entrar."
+      }
+
+      if (msg.includes("Invalid login credentials")) {
+        msg = "Credenciais Inválidas!."
+      }
+
       Toast.show({
         type: 'error',
-        text1: 'Erro ao entrar',
-        text2: error.message,
+        text1: 'Erro ao entrar juca',
+        text2: msg,
       })
     } else {
       Toast.show({
@@ -64,7 +76,7 @@ export default function Auth() {
 
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.title}>Acessar Conta</Text>
 
       <View style={styles.verticallySpaced}>
