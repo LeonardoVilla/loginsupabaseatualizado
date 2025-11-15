@@ -52,7 +52,7 @@ Join our community of developers creating universal apps.
 
 ## Bibliotecas as serem instaladas
 ```bash
-npx expo install \
+npx expo install 
 npx expo install @supabase/supabase-js
 npx expo install @react-native-async-storage/async-storage
 npx expo install react-native-url-polyfill
