@@ -26,7 +26,7 @@ export default function Auth() {
       }
 
       if (msg.includes("Invalid login credentials")) {
-        msg = "Credenciais Inválidas!."
+        msg = "Credenciais Inválidas! Usuário ou Senha Inválidos."
       }
 
       Toast.show({
