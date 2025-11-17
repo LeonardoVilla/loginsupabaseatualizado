@@ -1,0 +1,42 @@
+name: Commit Diário Cuiabá
+
+on:
+  schedule:
+    - cron: "0 */8 * * *"  # Executa a cada 8 horas
+  workflow_dispatch:
+
+jobs:
+  commit-automatico:
+    runs-on: ubuntu-latest
+    steps:
+      # 1️⃣ Clonar o repositório
+      - name: Clonar repositório
+        uses: actions/checkout@v4
+
+      # 2️⃣ Adicionar entrada enumerada no README.md
+      - name: Adicionar entrada no README
+        run: |
+          # Define o fuso horário para Cuiabá
+          export TZ="America/Cuiaba"
+          
+          # Se README.md existir, pega o último número; senão, começa do 0
+          if [ -f README.md ]; then
+            last_number=$(awk '/^[0-9]+\./ {n=$1} END{print n}' README.md | tr -d '.')
+            if [ -z "$last_number" ]; then
+              last_number=0
+            fi
+          else
+            last_number=0
+          fi
+
+          # Incrementa
+          next_number=$((last_number + 1))
+
+          # Adiciona a linha numerada no README.md
+          echo "$next_number. 📌 $(date '+%d/%m/%Y %H:%M:%S') — Commit automático Cuiabá" >> README.md
+
+      # 3️⃣ Commit e push
+      - name: Commit e push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📌 Commit automático Cuiabá"
