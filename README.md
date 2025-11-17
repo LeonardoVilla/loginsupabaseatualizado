@@ -58,3 +58,7 @@ npx expo install @react-native-async-storage/async-storage
 npx expo install react-native-url-polyfill
 npx expo install react-native-toast-message
 ```3. 📌 17/11/2025 13:26:55 — Commit automático Cuiabá
+
+- **Adicione links para PRs, branches ou issues.**  
+  Se você estiver trabalhando com pull requests, branches específicos ou issues, adicione os links diretos para facilitar a rastreabilidade.📌 17/11/2025 13:53:47 — Commit automático
+1. 📌 17/11/2025 10:20:17 — Commit automático Cuiabá
