@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { StyleSheet, View, TextInput, Text, TouchableOpacity } from 'react-native'
 import Toast from 'react-native-toast-message'
 import { supabase } from '../lib/supabase'
+import { router } from 'expo-router' //Tratamento e identificação de rotas
 
 export default function Auth() {
   const [email, setEmail] = useState('')
@@ -40,6 +41,12 @@ export default function Auth() {
         text1: 'Login realizado!',
         text2: 'Bem-vindo de volta 👋',
       })
+
+      // 🚀 AGORA SIM: vai para a rota (tabs)
+      setTimeout(() => {
+        router.replace("/(tabs)")   // ou router.push("/") se quiser
+      }, 1200) // espera o toast aparecer
+
     }
 
     setLoading(false)
