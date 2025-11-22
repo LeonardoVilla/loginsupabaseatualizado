@@ -15,16 +15,6 @@ export default function CadastrosGeraisScreen() {
       {/* Links tipo Linktree */}
       <ThemedView style={styles.linksContainer}>
 
-        <Link href="/(alunos)" style={styles.linkButton}>
-          <ThemedText style={styles.linkText}>Aluno</ThemedText>
-        </Link>
-
-        {/* Você pode adicionar outros links aqui */}
-        {/* 
-        <Link href="/(professores)/create" style={styles.linkButton}>
-          <ThemedText style={styles.linkText}>Cadastrar Professor</ThemedText>
-        </Link>
-        */}
 
       </ThemedView>
     </SafeAreaView>
