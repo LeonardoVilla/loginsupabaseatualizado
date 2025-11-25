@@ -87,3 +87,4 @@ npx expo install react-native-toast-message
 22. 📌 23/11/2025 20:54:52 — Commit automático Cuiabá
 23. 📌 24/11/2025 04:16:32 — Commit automático Cuiabá
 24. 📌 24/11/2025 12:11:57 — Commit automático Cuiabá
+25. 📌 24/11/2025 20:50:12 — Commit automático Cuiabá
